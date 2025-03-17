@@ -33,6 +33,7 @@ jobs:
 
       - name: Run tests
         run: npm test
+        
       - name: Deploy
         uses: youssefchehata/actions-gh-pages@v4
         with:
