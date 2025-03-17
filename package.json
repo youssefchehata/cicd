@@ -2,6 +2,7 @@
   "name": "cicd",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://youssefchehata.github.io/cicd",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -22,6 +23,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "test": "react-scripts test",
+    "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
