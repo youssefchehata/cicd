@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from './1718239085699.jpg';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
+          <img src={process.env.PUBLIC_URL + '/1718239085699.jpg'} alt="logo" />
           {/* Edit <code>src/App.tsx</code> and save to reload. */}
         </p>
         <a
