@@ -18,7 +18,8 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build",
+    // "deploy": "gh-pages -b main -d build",
+    "deploy": "gh-pages -b main -d build && netlify deploy --dir=./build -p -m 'git log -1 --pretty=%B'",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "build": "react-scripts build",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "netlify-cli": "^19.0.2"
   }
 }
