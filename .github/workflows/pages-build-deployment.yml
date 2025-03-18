@@ -28,9 +28,17 @@ jobs:
       - name: Build project
         run: npm run build --if-present
 
+      - name: Ensure Build Directory Exists
+        run: |
+          if [ ! -d "build" ]; then
+            echo "Build directory missing!"
+            exit 1
+          fi
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           publish_branch: gh-pages
+        
