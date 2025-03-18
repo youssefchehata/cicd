@@ -18,7 +18,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    // "deploy": "gh-pages -b main -d build",
     "deploy": "gh-pages -b main -d build && netlify deploy --dir=./build -p -m 'git log -1 --pretty=%B'",
     "start": "react-scripts start",
     "test": "react-scripts test",
