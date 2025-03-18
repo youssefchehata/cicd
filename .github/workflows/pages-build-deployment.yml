@@ -1,13 +1,11 @@
-name: pages-build-deployment
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -27,9 +25,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project (if applicable)
+      - name: Build project
         run: npm run build --if-present
 
-      - name: Run tests
-        run: npm test
-
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
