@@ -11,3 +11,4 @@ git push origin gh-pages --force
 
 
 
+=>git push --force origin main
