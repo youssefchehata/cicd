@@ -17,7 +17,7 @@ Installation
 
 Clonez ce dépôt :
 
-git clone [https://github.com/VOTRE_UTILISATEUR/NOM_DU_DEPOT.git](https://github.com/youssefchehata/cicd.git)
+git clone https://github.com/youssefchehata/cicd.git
 
 Accédez au dossier du projet :
 
